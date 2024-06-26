@@ -1,6 +1,6 @@
-# Bayesian hierarchical model with adaptive similarity evaluation (BHM-ASE)
-This repository is the source code of BHM-ASE of treatment effects in oncology basket trials.
-- **implementation.R** is the R code for analysis of generated trial data by BHM-ASE.
+# UPSiDe: Unit information prior for simple Bayesian basket design in oncology trials
+This repository is the source codes of UPSiDe-D and UPSiDe-JS for estimating treatment effects in oncology basket trials.
+- **implementation.R** is the R code for the analysis of the vemuragenib trial data by UPSiDe-D, UPSiDe-JS1, and UPSiDe-JS2.
 - **functions.R** is the R code containing functions for implement.R.
-- **BHM-ASE.txt** is the jags code to run BHM-ASE with MCMC.
-- **grid_search_example.csv** is an example of a list of true positive and false positive rates for each cancer type obtained from a grid search.
+- **UPSiDe-D.txt** is the jags code to run UPSiDe-D with MCMC.
+- **UPSiDe-JS.txt** is the jags code to run UPSiDe-JS2 with MCMC.
