@@ -1,6 +1,6 @@
 # UPSiDe: Unit information prior for simple Bayesian basket design in oncology trials
-This repository is the source codes of UPSiDe-D and UPSiDe-JS for estimating treatment effects in oncology basket trials.
-- **implementation.R** is the R code for the analysis of the vemuragenib trial data by UPSiDe-D, UPSiDe-JS1, and UPSiDe-JS2.
-- **functions.R** is the R code containing functions for implement.R.
-- **UPSiDe-D.txt** is the jags code to run UPSiDe-D with MCMC.
-- **UPSiDe-JS.txt** is the jags code to run UPSiDe-JS2 with MCMC.
+This repository contains the source code for UPSiDe-D and UPSiDe-JS, designed to estimate treatment effects in oncology basket trials.
+- **implementation.R:** This R script provides the code to analyze the vemurafenib trial data using UPSiDe-D, UPSiDe-JS1, and UPSiDe-JS2.
+- **functions.R:** This R script contains the functions utilized in implementation.R.
+- **UPSiDe-D.txt:** This file contains the JAGS code for running the UPSiDe-D model using Markov Chain Monte Carlo (MCMC) methods.
+- **UPSiDe-JS.txt:** This file contains the JAGS code for running the UPSiDe-JS2 model using MCMC methods.
