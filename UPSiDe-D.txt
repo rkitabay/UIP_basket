@@ -1,0 +1,24 @@
+model{
+
+wvct ~ ddirich(zvct)
+M ~ dunif(0.01, upM)
+
+for(i in 1:I){
+
+for(j in 1:(I - 1)){
+wmtx[i, j] <- wvct[ref[i, jlist[i, j]]] / 2
+Mwmtx[i, j] <- M * wmtx[i, j]
+MwUImtx[i, j] <- Mwmtx[i, j] * min(1 / (pi.min * (1 - pi.min)), 1 / (Means[jlist[i, j]] * (1 - Means[jlist[i, j]])))
+}
+
+avg[i] <- sum(wmtx[i, 1:(I - 1)] * Means[jlist[i, 1:(I - 1)]]) / sum(wmtx[i, 1:(I - 1)])
+prec[i] <- sum(MwUImtx[i, 1:(I - 1)])
+
+alp[i] <- max(avg[i] * (avg[i] * (1 - avg[i]) * prec[i] - 1), alp.min)
+bet[i] <- max((1 - avg[i]) * (avg[i] * (1 - avg[i]) * prec[i] - 1), bet.min)
+
+pi[i] ~ dbeta(alp[i], bet[i])
+x[i] ~ dbin(pi[i], n[i])
+}
+postM <- M
+}
